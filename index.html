@@ -1,16 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ForHambrientos</title>
+    <title>Cargando Recetas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff7ed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .loader-container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+        }
+        .loader-title {
+            font-size: 2.5rem;
+            color: #ea580c;
+            margin-bottom: 2rem;
+        }
+        .loader-icons {
+            font-size: 2rem;
+            color: #f97316;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .loader-icon {
+            margin: 0.5rem;
+        }
+        .loader-skeleton {
+            background-color: #fed7aa;
+            height: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.25rem;
+        }
+        .loader-circles {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .loader-circle {
+            width: 4rem;
+            height: 4rem;
+            background-color: #fed7aa;
+            border-radius: 50%;
+            margin: 0 1rem;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="loader-container">
+        <h1 class="loader-title">Cargando Delicias...</h1>
+        <div class="loader-icons">
+            <i class="fas fa-utensils loader-icon" id="icon1"></i>
+            <i class="fas fa-bread-slice loader-icon" id="icon2"></i>
+            <i class="fas fa-apple-alt loader-icon" id="icon3"></i>
+        </div>
+        <div class="loader-skeleton" style="width: 100%;"></div>
+        <div class="loader-skeleton" style="width: 75%;"></div>
+        <div class="loader-skeleton" style="width: 50%;"></div>
+        <div class="loader-circles">
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+        </div>
+    </div>
 
-    <div> <h1> Hola Compañeres </h1></div>
+    <script>
+        // Animaciones con GSAP
+        gsap.to("#icon1", {y: -10, duration: 0.5, repeat: -1, yoyo: true});
+        gsap.to("#icon2", {y: -10, duration: 0.5, repeat: -1, yoyo: true});
+        gsap.to("#icon3", {y: -10, duration: 0.5, repeat: -1, yoyo: true});
 
+        gsap.to(".loader-skeleton", {
+            opacity: 0.5,
+            duration: 0.8,
+            repeat: -1,
+            yoyo: true,
+            stagger: 0.2
+        });
+
+        gsap.to(".loader-circle", {
+            scale: 0.8,
+            duration: 0.8,
+            repeat: -1,
+            yoyo: true,
+            stagger: 0.2
+        });
+    </script>
 </body>
-
 </html>
