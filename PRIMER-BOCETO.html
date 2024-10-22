@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ForHambrientos</title>
+    <link rel="icon" href="imagen/logo-forhambrientos.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="complemento.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+
+            <div class="logo">ForHambrientos</div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#recetas">Recetas</a></li>
+                <li><a href="#agregar">Agregar Receta</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>Descubre la Riqueza de la Cocina Mexicana</h1>
+            <p>Explora nuestras recetas económicas y llenas de sabor</p>
+        </section>
+
+        <section id="recetas" class="recetas-container">
+            <h2>Nuestras Recetas</h2>
+            <div class="filtro">
+                <label for="filtro-recetas">Filtrar recetas:</label>
+                <input type="text" id="filtro-recetas" placeholder="Escribe para filtrar...">
+            </div>
+            <ul id="lista-recetas" class="lista-recetas">
+                <!-- Cargados Con js -->
+            </ul>
+        </section>
+
+        <section id="agregar" class="agregar-receta">
+            <h2>Comparte tu Receta</h2>
+            <form id="form-receta">
+                <div class="form-group">
+                    <label for="nueva-receta">Nombre de la Receta:</label>
+                    <input type="text" id="nueva-receta" name="nueva-receta" required>
+                </div>
+                <div class="form-group">
+                    <label for="ingredientes-receta">Ingredientes:</label>
+                    <textarea id="ingredientes-receta" name="ingredientes-receta" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="precio-receta">Precio Estimado (MXN):</label>
+                    <input type="number" id="precio-receta" name="precio-receta" required min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="tiempo-preparacion">Tiempo de Preparación (minutos):</label>
+                    <input type="number" id="tiempo-preparacion" name="tiempo-preparacion" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="tiempo-coccion">Tiempo de Cocción (minutos):</label>
+                    <input type="number" id="tiempo-coccion" name="tiempo-coccion" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion-receta">Instrucciones:</label>
+                    <textarea id="descripcion-receta" name="descripcion-receta" required></textarea>
+                </div>
+                <button type="submit">Agregar Receta</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sabores de México - Recetas Económicas</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

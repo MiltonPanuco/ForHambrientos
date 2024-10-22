@@ -1,20 +1,30 @@
-/* HEADER */
+/* COLORES GENERALES */
 
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+:root {
+    --primary-color: #e44d26;
+    --secondary-color: #f16529;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --accent-color: #4CAF50;
+    --card-background: #ffffff;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
 
 header {
     background-color: var(--primary-color);
-    padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 nav {
@@ -23,35 +33,133 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 5px;
+}
+
+.logo-text {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 700;
     color: white;
 }
 
-nav ul {
+.nav-links {
     display: flex;
     list-style: none;
 }
 
-nav ul li {
+.nav-links li {
     margin-left: 2rem;
 }
 
-nav ul li a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 300;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
     color: var(--secondary-color);
 }
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(228, 77, 38, 0.8); 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 1000;
+        order: -1;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .logo-text {
+        font-size: 1.4rem; 
+        text-align: center;
+    }
+}
+
+header.sticky {
+    padding: 0.5rem 0;
+}
+
+header.sticky nav {
+    padding: 0.5rem 2rem;
+}
+
+header.sticky .logo img {
+    height: 30px;
+}
+
+header.sticky .logo-text {
+    font-size: 1.4rem;
+}
+
+/* FOOTER */
 
 footer {
     text-align: center;
@@ -59,4 +167,58 @@ footer {
     background-color: var(--primary-color);
     color: white;
     margin-top: 2rem;
+}
+
+.hover-only a:hover {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+/* BOTON AUTOMATICO SCROLL */
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s, visibility 0.6s;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#scrollToTop i {
+    color: var(--background-color);
+    font-size: 20px;
+}
+
+#scrollToTop:hover {
+    background-color: var(--background-color);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.2s, background-color 0.3s, color 0.3s;
+}
+
+#scrollToTop:hover i {
+    color: var(--primary-color);
+}
+
+#scrollToTop.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+#scrollToTop.hide {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
 }
