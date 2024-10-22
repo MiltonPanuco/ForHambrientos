@@ -44,3 +44,15 @@
 .contact-form button:hover {
     background-color: #f16529;
 }
+
+.contacto {
+    text-align: center;
+}
+
+.formulario {
+    text-align: left !important;
+}
+
+#label-nombre {
+    text-align: center;
+}

@@ -8,9 +8,9 @@ const headerContent = `
 
         <!-- Enlaces -->
         <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#recetas">Recetas</a></li>
-            <li><a href="#agregar">Agregar Receta</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="recetas.html">Recetas</a></li>
+            <li><a href="agregar-recetas.html">Agregar Receta</a></li>
             <li><a href="contacto.html">Contáctanos</a></li>
         </ul>
 
