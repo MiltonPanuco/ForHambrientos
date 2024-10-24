@@ -3,14 +3,14 @@ const footerContent = `
 
         <div class="flex flex-wrap justify-between items-center">
 
-            <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <div class="w-full md:w-1/3 mb-6 md:mb-0 ">
                 <h3 class="text-2xl font-bold mb-2" style="font-family: 'Playfair Display', serif;">ForHambrientos</h3>
                 <p class="text-sm hover-only">Email:<a href="#"> forhambrientos.company@gmail.com</a></p>
             </div>
             
             <div class="w-full md:w-1/3 mb-6 md:mb-0">
                 <h3 class="text-xl font-bold mb-2" style="font-family: 'Playfair Display', serif;">Enlaces rápidos</h3>
-                <ul class="text-sm hover-only">
+                <ul class="text-sm hover-only ">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="recetas.html">Recetas</a></li>
                     <li><a href="agregar-recetas.html">Agregar Recetas</a></li>

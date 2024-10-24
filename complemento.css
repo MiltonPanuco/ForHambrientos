@@ -169,6 +169,10 @@ footer {
     margin-top: 2rem;
 }
 
+footer a, footer p{
+    font-weight: 300;
+}
+
 .hover-only a:hover {
     color: var(--secondary-color);
     transition: color 0.3s ease;
