@@ -3,7 +3,7 @@ const footerContent = `
 
         <div class="flex flex-wrap justify-between items-center">
 
-            <div class="w-full md:w-1/3 mb-6 md:mb-0 ">
+            <div class="w-full md:w-1/3 mb-6 md:mb-0">
                 <h3 class="text-2xl font-bold mb-2" style="font-family: 'Playfair Display', serif;">ForHambrientos</h3>
                 <p class="text-sm hover-only">Email:<a href="#"> forhambrientos.company@gmail.com</a></p>
             </div>
