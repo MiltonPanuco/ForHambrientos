@@ -4,9 +4,11 @@
     --primary-color: #e44d26;
     --secondary-color: #f16529;
     --background-color: #f9f9f9;
+    --border-color: gray;
     --text-color: #333;
     --accent-color: #4CAF50;
     --card-background: #ffffff;
+    
 }
 
 * {
@@ -51,7 +53,7 @@ nav {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 700;
-    color: white;
+    color: var(--card-background);
 }
 
 .nav-links {
@@ -64,7 +66,7 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--card-background);
     text-decoration: none;
     font-weight: 300;
     transition: color 0.3s ease;
@@ -83,7 +85,7 @@ nav {
 .menu-toggle span {
     height: 3px;
     width: 25px;
-    background-color: white;
+    background-color: var(--card-background);
     margin-bottom: 5px;
     transition: all 0.3s ease;
 }
@@ -100,7 +102,7 @@ nav {
         left: 0;
         height: 100vh;
         width: 100%;
-        background-color: rgba(228, 77, 38, 0.8); 
+        background-color: var(--primary-color); 
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -195,7 +197,7 @@ footer a, footer p{
     border: none;
     padding: 12px;
     border-radius: 50%;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 16px var(--text-color);
     cursor: pointer;
 }
 
@@ -206,7 +208,7 @@ footer a, footer p{
 
 #scrollToTop:hover {
     background-color: var(--background-color);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 12px var(--text-color);
     transform: scale(1.05);
     transition: transform 0.2s, background-color 0.3s, color 0.3s;
 }

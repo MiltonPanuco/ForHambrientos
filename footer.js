@@ -1,40 +1,58 @@
 const footerContent = `
-    <div class="container mx-auto px-4">
-
-        <div class="flex flex-wrap justify-between items-center">
-
-            <div class="w-full md:w-1/3 mb-6 md:mb-0">
-                <h3 class="text-2xl font-bold mb-2" style="font-family: 'Playfair Display', serif;">ForHambrientos</h3>
-                <p class="text-sm hover-only">Email:<a href="#"> forhambrientos.company@gmail.com</a></p>
+<div style="padding: 20px;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px; margin-bottom: 10px;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #ffffff;">ForHambrientos</h3>
+                <p style="color: #ffffff;">Email: <a href="mailto:Forhambrientos.company@gmail.com" style="color: #ffffff;">Forhambrientos.company@gmail.com</a></p>
             </div>
-            
-            <div class="w-full md:w-1/3 mb-6 md:mb-0">
-                <h3 class="text-xl font-bold mb-2" style="font-family: 'Playfair Display', serif;">Enlaces rápidos</h3>
-                <ul class="text-sm hover-only ">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="recetas.html">Recetas</a></li>
-                    <li><a href="agregar-recetas.html">Agregar Recetas</a></li>
-                    <li><a href="contacto.html">Contáctanos</a></li>
+            <div style="flex: 1; min-width: 250px; margin-bottom: 10px;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #ffffff;">Enlaces rápidos</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="index.html" style="color: #ffffff;">Inicio</a></li>
+                    <li><a href="recetas.html" style="color: #ffffff;">Recetas</a></li>
+                    <li><a href="agregar-recetas.html" style="color: #ffffff;">Agregar Recetas</a></li>
+                    <li><a href="contacto.html" style="color: #ffffff;">Contáctanos</a></li>
                 </ul>
             </div>
-
-            <div class="w-full md:w-1/3">
-                <img src="imagen/logo-forhambrientos.png" alt="Logo ForHambrientos" class="mx-auto h-24 md:h-32 lg:h-40">
-            </div>
-
-        </div>
-
-        <hr class="border-orange-700 my-6">
-
-        <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm">&copy; 2024 ForHambrientos. Todos los derechos reservados.</p>
-            <div class="mt-4 md:mt-0">
-                <a href="terminos-y-condiciones.html" class="text-sm hover:underline mr-4">Términos y Condiciones</a>
-                <a href="aviso-de-privacidad.html" class="text-sm hover:underline">Aviso de Privacidad</a>
+            <div style="flex: 1; min-width: 250px;">
+                <img src="imagen/logo-forhambrientos.png" alt="Logo ForHambrientos" style="height: 100px;">
             </div>
         </div>
-
+        <hr style="border: 1px solid #ffffff; margin: 20px 0;">
+        <p style="color: #ffffff;">&copy; 2024 ForHambrientos. Todos los derechos reservados.</p>
+        <div style="margin-top: 10px;">
+            <a href="terminos-y-condiciones.html" style="color: #ffffff; margin-right: 15px;">Términos y Condiciones</a>
+            <a href="aviso-de-privacidad.html" style="color: #ffffff;">Aviso de Privacidad</a>
+        </div>
     </div>
+    <style>
+       
+
+        .footer-container{
+        background-color: #f16529;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        font-size: 14px;
+        }
+
+        .footer-container a {
+        color:#ffffff;
+        text-decoration:none;
+        }
+
+        .footer-container a:hover {
+        text-decoration:underline;
+        }
+
+
+        .footer-container div {
+        max-width: 1200px;
+        margin: auto;
+        }   
+    </style>
+
 `;
 
 document.getElementById('dynamic-footer').innerHTML = footerContent;
