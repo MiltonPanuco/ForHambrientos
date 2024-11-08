@@ -8,12 +8,11 @@
     <title>ForHambrientos</title>
     <link rel="icon" href="imagen/logo-forhambrientos.png" type="image/x-icon">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="aqui-se-pone-el-nuevo.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="complemento.css">
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
@@ -26,11 +25,90 @@
     <!-- Header -->
     <header id="dynamic-header"></header>
 
+    <br><br><br><br><br>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- Carrusel de alimentos -->
+    <div class="carrusel-container">
+        <div class="carrusel">
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/arroz.jpg" alt="Arroz" class="carrusel-img">
+                <p>Arroz</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/menudo.jpg" alt="Menudo" class="carrusel-img">
+                <p>Menudo</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/pozole.jpg" alt="Pozole" class="carrusel-img">
+                <p>Pozole</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/carne.jpg" alt="Carne" class="carrusel-img">
+                <p>Carne</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/pollo.jpg" alt="Pollo" class="carrusel-img">
+                <p>Pollo</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/tostadas.jpg" alt="Tostadas" class="carrusel-img">
+                <p>Tostadas</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/sopa-de-tortilla.jpg" alt="Sopa De Tortillas" class="carrusel-img">
+                <p>Sopa De Tortillas</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/burritos.jpg" alt="Burritos" class="carrusel-img">
+                <p>Burritos</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/tacos.jpg" alt="Tacos" class="carrusel-img">
+                <p>Tacos</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/chilaquiles.jpg" alt="Chilaquiles" class="carrusel-img">
+                <p>Chilaquiles</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/tamales.jpg" alt="Tamales" class="carrusel-img">
+                <p>Tamales</p>
+            </a>
+            <a href="#" class="carrusel-item">
+                <img src="imagen/index/pambazos.jpg" alt="Pambazos" class="carrusel-img">
+                <p>Pambazos</p>
+            </a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- Slider de imágenes -->
+    <div class="slider-container">
+        <div class="slider">
+            <a href="#" class="slide">
+                <img src="imagen/index/arroz.jpg" alt="Plato 1">
+            </a>
+            <a href="v" class="slide">
+                <img src="imagen/index/arroz.jpg" alt="Plato 2">
+            </a>
+            <a href="#" class="slide">
+                <img src="imagen/index/arroz.jpg" alt="Plato 3">
+            </a>
+            <a href="#" class="slide">
+                <img src="imagen/index/arroz.jpg" alt="Plato 4">
+            </a>
+        </div>
+        <div class="slider-nav">
+            <button class="slider-nav-button" data-index="0"></button>
+            <button class="slider-nav-button" data-index="1"></button>
+            <button class="slider-nav-button" data-index="2"></button>
+            <button class="slider-nav-button" data-index="3"></button>
+        </div>
+    </div>
+
     <!-- Aquí va el contenido -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
 
     <!-- Footer -->
     <footer id="dynamic-footer" class="py-8">
@@ -41,6 +119,8 @@
     <button id="scrollToTop" class="transition duration-300 ease-in-out">
         <i class="fas fa-chevron-up"></i>
     </button>
+
+    <script src="index.js"></script>
 
     <script src="autoscroll.js"></script>
     <script src="footer.js"></script>
