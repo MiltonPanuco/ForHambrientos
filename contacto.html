@@ -1,70 +1,70 @@
 <!DOCTYPE html>
-<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contacto - For Hambreintos</title>
+    <title>Contacto</title>
 
-    <!-- Importar todo esto-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="contacto.css">
     <link rel="stylesheet" href="complemento.css">
-    <link rel="stylesheet" href="index.css">
-    <!-- Hasta aqui-->
+
 </head>
 
-<body class="bg-gray-50 min-h-screen items-center justify-center">
+<body>
     
+    <!-- Futura pantalla de carga -->
+    <div id="loader-wrapper"></div>
+
+    <!-- Header -->
     <header id="dynamic-header"></header>
 
-<br><br><br><br>
-<div class="content">
+    <br><br><br><br><br>
+
+    <div class="content">
         <div class="container">
             <h1>Contáctanos</h1>
             <p>¿Tienes alguna pregunta o sugerencia? Estamos aquí para ayudarte. Tu opinión es importante para nosotros.</p>
-            <form>
+            
+            <form id="contactForm">
                 <div class="form-group">
                     <label for="name">Nombre</label>
-                    <input type="text" id="name" placeholder="Tu nombre completo"
-                    pattern="[A-Za-zÁáÉéÍíÓóÚúÑñ\s]{3,}"
-                    title="El nombre debe tener al menos 3 letras y solo puede contener letras, espacios y acentos." 
-                    required aria-required="true">
-                    <small>Solo letras, espacios y almenos 3 caracteres.</small>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre completo" pattern="[A-Za-zÁáÉéÍíÓóÚúÑñ\s]{3,}" title="El nombre debe tener al menos 3 letras y solo puede contener letras, espacios y acentos." required>
+                    <small>Solo letras, espacios y al menos 3 caracteres.</small>
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" placeholder="Tucorreo@ejemplo.com"
-                    title="Introduce una direccion de correo valida."
-                    required aria-required="true">
+                    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" title="Introduce una dirección de correo válida." required>
                     <small>Debe ser un correo electrónico válido.</small>
                 </div>
-                <br>
                 <div class="form-group">
                     <label for="message">Mensaje</label>
-                    <textarea id="message" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Enviar</button>
             </form>
+            
         </div>
-</div>
+    </div>
 
-    <footer id="dynamic-footer" class="footer-container"></footer>
+    <footer id="dynamic-footer">
+        <!-- Agregado con JS -->
+    </footer>
 
     <button id="scrollToTop" class="transition duration-300 ease-in-out">
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- Importar todo esto-->
+    <script src="contacto.js"></script>
+
     <script src="autoscroll.js"></script>
     <script src="footer.js"></script>
     <script src="header.js"></script>
     <script src="menu.js"></script>
-        <!-- Hasta aqui-->
+
 </body>
 
 </html>
