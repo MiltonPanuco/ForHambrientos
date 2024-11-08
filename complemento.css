@@ -24,6 +24,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Texto Header / Footer"; 
+    src: url("fonts/Montserrat-VariableFont_wght.ttf") format("truetype"); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* HEADER */
 
 .header {
@@ -67,7 +74,7 @@
 .nav-links {
     display: flex;
     list-style: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Texto Header / Footer";
 }
 
 .nav-links li {
@@ -164,7 +171,7 @@
     background-color: var(--primary-color);
     color: white;
     padding: 3rem 1rem;
-    font-family: 'Arial', sans-serif;
+    font-family: "Texto Header / Footer";
 }
 
 .footer-container {
