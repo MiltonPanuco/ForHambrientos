@@ -1,0 +1,156 @@
+.form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text-color);
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--input-border);
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            background-color: var(--input-background);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+
+        .form-group input:invalid,
+        .form-group select:invalid,
+        .form-group textarea:invalid {
+            border-color: var(--error-color);
+        }
+
+        .form-group input:valid,
+        .form-group select:valid,
+        .form-group textarea:valid {
+            border-color: var(--success-color);
+        }
+
+        .form-group small {
+            display: block;
+            color: #666;
+            margin-top: 5px;
+            font-size: 0.85em;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #666;
+        }
+
+        .form-footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .form-footer a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            .form-container h2 {
+                font-size: 24px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea,
+            .submit-btn {
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+
+        /* Animación de carga para el botón de envío */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .submit-btn.loading {
+            position: relative;
+            color: transparent;
+        }
+
+        .submit-btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-top: -10px;
+            margin-left: -10px;
+            border: 2px solid #ffffff;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
