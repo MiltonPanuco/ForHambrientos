@@ -16,35 +16,16 @@
 
 <body>
 
-    <header id="header" class="header">
-        <nav class="nav-container">
-            
-            <div class="logo">
-                <img src="imagen/logo-forhambrientos.png" alt="ForHambrientos Logo">
-                <span class="logo-text">ForHambrientos</span>
-            </div>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="recetas.html">Recetas</a></li>
-                <li><a href="agregar-recetas.html">Agregar Receta</a></li>
-                <li><a href="contacto.html">Contáctanos</a></li>
-            </ul>
-            
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-    
-        </nav>
-    </header>
+    <!-- Futura pantalla de carga -->
+    <div id="loader-wrapper"></div>
 
-   
+    <!-- Header -->
+    <header id="dynamic-header"></header>
+
     <br><br><br><br><br>
 
     <!-- Carrusel de alimentos -->
-    <div class="carrusel-container">
+    <div class="carrusel-container" style="margin-top: 5rem">
         <div class="carrusel">
             <a href="#" class="carrusel-item">
                 <img src="imagen/index/arroz.jpg" alt="Arroz" class="carrusel-img">
@@ -97,7 +78,7 @@
         </div>
     </div>
 
-    <br><br>
+    <br>
 
     <!-- Slider de imágenes -->
     <div class="slider-container">
@@ -122,9 +103,6 @@
             <button class="slider-nav-button" data-index="3"></button>
         </div>
     </div>
-
-    <!-- Aquí va el contenido -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
     <script src="index.js"></script>
