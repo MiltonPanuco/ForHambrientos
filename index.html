@@ -11,137 +11,173 @@
     <link rel="stylesheet" href="complemento.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
 </head>
 
 <body>
 
-        
     <header id="header" class="header">
         <nav class="nav-container">
-            
+
             <div class="logo">
                 <img src="imagen/logo-forhambrientos.png" alt="ForHambrientos Logo">
                 <span class="logo-text">ForHambrientos</span>
             </div>
-            
+
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="recetas.html">Recetas</a></li>
                 <li><a href="agregar-recetas.html">Agregar Receta</a></li>
                 <li><a href="contacto.html">Contáctanos</a></li>
             </ul>
-            
+
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-    
+
         </nav>
     </header>
-    
+
     <!-- Futura pantalla de carga -->
     <div id="loader-wrapper"></div>
 
-    <!-- Header -->
-    <header id="dynamic-header"></header>
+    <div class="father-container">
+        <!-- Carrusel de alimentos -->
+        <div class="carrusel-container" style="margin-top: 3rem">
+            <div class="carrusel">
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/arroz.jpg" alt="Arroz" class="carrusel-img">
+                    <p>Arroz</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/menudo.jpg" alt="Menudo" class="carrusel-img">
+                    <p>Menudo</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/pozole.jpg" alt="Pozole" class="carrusel-img">
+                    <p>Pozole</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/carne.jpg" alt="Carne" class="carrusel-img">
+                    <p>Carne</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/pollo.jpg" alt="Pollo" class="carrusel-img">
+                    <p>Pollo</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/tostadas.jpg" alt="Tostadas" class="carrusel-img">
+                    <p>Tostadas</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/sopa-de-tortilla.jpg" alt="Sopa De Tortillas" class="carrusel-img">
+                    <p>Sopa De Tortillas</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/burritos.jpg" alt="Burritos" class="carrusel-img">
+                    <p>Burritos</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/tacos.jpg" alt="Tacos" class="carrusel-img">
+                    <p>Tacos</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/chilaquiles.jpg" alt="Chilaquiles" class="carrusel-img">
+                    <p>Chilaquiles</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/tamales.jpg" alt="Tamales" class="carrusel-img">
+                    <p>Tamales</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/pambazos.jpg" alt="Pambazos" class="carrusel-img">
+                    <p>Pambazos</p>
+                </a>
 
-    <br><br><br><br><br>
+                <!-- Duplicado de cosas por falta del pedorro js -->
 
-    <!-- Carrusel de alimentos -->
-    <div class="carrusel-container" style="margin-top: 5rem">
-        <div class="carrusel">
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/arroz.jpg" alt="Arroz" class="carrusel-img">
-                <p>Arroz</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/menudo.jpg" alt="Menudo" class="carrusel-img">
-                <p>Menudo</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/pozole.jpg" alt="Pozole" class="carrusel-img">
-                <p>Pozole</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/carne.jpg" alt="Carne" class="carrusel-img">
-                <p>Carne</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/pollo.jpg" alt="Pollo" class="carrusel-img">
-                <p>Pollo</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/tostadas.jpg" alt="Tostadas" class="carrusel-img">
-                <p>Tostadas</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/sopa-de-tortilla.jpg" alt="Sopa De Tortillas" class="carrusel-img">
-                <p>Sopa De Tortillas</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/burritos.jpg" alt="Burritos" class="carrusel-img">
-                <p>Burritos</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/tacos.jpg" alt="Tacos" class="carrusel-img">
-                <p>Tacos</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/chilaquiles.jpg" alt="Chilaquiles" class="carrusel-img">
-                <p>Chilaquiles</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/tamales.jpg" alt="Tamales" class="carrusel-img">
-                <p>Tamales</p>
-            </a>
-            <a href="#" class="carrusel-item">
-                <img src="imagen/index/pambazos.jpg" alt="Pambazos" class="carrusel-img">
-                <p>Pambazos</p>
-            </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/arroz.jpg" alt="Arroz" class="carrusel-img">
+                    <p>Arroz</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/menudo.jpg" alt="Menudo" class="carrusel-img">
+                    <p>Menudo</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/pozole.jpg" alt="Pozole" class="carrusel-img">
+                    <p>Pozole</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/carne.jpg" alt="Carne" class="carrusel-img">
+                    <p>Carne</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/pollo.jpg" alt="Pollo" class="carrusel-img">
+                    <p>Pollo</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/tostadas.jpg" alt="Tostadas" class="carrusel-img">
+                    <p>Tostadas</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/sopa-de-tortilla.jpg" alt="Sopa De Tortillas" class="carrusel-img">
+                    <p>Sopa De Tortillas</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/burritos.jpg" alt="Burritos" class="carrusel-img">
+                    <p>Burritos</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/tacos.jpg" alt="Tacos" class="carrusel-img">
+                    <p>Tacos</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/chilaquiles.jpg" alt="Chilaquiles" class="carrusel-img">
+                    <p>Chilaquiles</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/tamales.jpg" alt="Tamales" class="carrusel-img">
+                    <p>Tamales</p>
+                </a>
+                <a href="#" class="carrusel-item">
+                    <img src="imagen/index/pambazos.jpg" alt="Pambazos" class="carrusel-img">
+                    <p>Pambazos</p>
+                </a>
+            </div>
         </div>
+
+
+        <!-- Slider de imágenes -->
+        <div class="slider-container" style="margin-bottom: 3rem">
+            <div class="slider">
+                <div class="slide">
+                    <img src="imagen/index/slider-1.jpg" alt="Slider 1">
+                </div>
+                <div class="slide">
+                    <img src="imagen/index/slider-2.jpg" alt="Slider 2">
+                </div>
+                <div class="slide">
+                    <img src="imagen/index/slider-3.png" alt="Slider 3">
+                </div>
+                <div class="slide">
+                    <img src="imagen/index/slider-4.jpg" alt="Slider 4">
+                </div>
+            </div>
+        </div>
+
     </div>
-
-    <br>
-
-    <!-- Slider de imágenes -->
-    <div class="slider-container">
-        <div class="slider">
-            <a href="#" class="slide">
-                <img src="imagen/index/arroz.jpg" alt="Plato 1">
-            </a>
-            <a href="#" class="slide">
-                <img src="imagen/index/arroz.jpg" alt="Plato 2">
-            </a>
-            <a href="#" class="slide">
-                <img src="imagen/index/arroz.jpg" alt="Plato 3">
-            </a>
-            <a href="#" class="slide">
-                <img src="imagen/index/arroz.jpg" alt="Plato 4">
-            </a>
-        </div>
-        <div class="slider-nav">
-            <button class="slider-nav-button" data-index="0"></button>
-            <button class="slider-nav-button" data-index="1"></button>
-            <button class="slider-nav-button" data-index="2"></button>
-            <button class="slider-nav-button" data-index="3"></button>
-        </div>
-    </div>
-
-
-    <script src="index.js"></script>
-
 
     <footer class="footer">
 
         <div class="footer-container">
-    
             <div class="footer-section">
                 <h2 class="footer-title">ForHambrientos</h2>
-                <p class="footer-contact">Email: <a href="mailto:Forhambrientos.company@gmail.com">forhambrientos.company@gmail.com</a></p>
+                <p class="footer-contact">Email: <a
+                        href="mailto:Forhambrientos.company@gmail.com">forhambrientos.company@gmail.com</a></p>
             </div>
-    
+
             <nav class="footer-section">
                 <h3 class="footer-subtitle">Enlaces rápidos</h3>
                 <ul class="footer-nav-list">
@@ -151,22 +187,22 @@
                     <li><a href="contacto.html">Contáctanos</a></li>
                 </ul>
             </nav>
-    
+
             <div class="footer-section">
                 <img src="imagen/logo-forhambrientos.png" alt="Logo ForHambrientos" class="footer-logo">
             </div>
         </div>
-    
+
         <div class="footer-bottom">
             <p class="footer-copyright">&copy; 2024 ForHambrientos. Todos los derechos reservados.</p>
             <div class="footer-legal">
-            <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
-            <a href="aviso-de-privacidad.html">Aviso de Privacidad</a>
+                <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+                <a href="aviso-de-privacidad.html">Aviso de Privacidad</a>
             </div>
         </div>
-    
-    </footer>
-</body>
 
+    </footer>
+
+</body>
 
 </html>
