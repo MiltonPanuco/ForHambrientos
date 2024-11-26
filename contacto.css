@@ -1,7 +1,6 @@
 body {
-    min-height: 100vh;           
-    padding-top: 4rem;         
-    margin: 0;
+    background-color: var(--background-color);
+    transition: all 0.3s ease;
 }
 
 .content {
@@ -13,13 +12,14 @@ body {
 }
 
 .container {
-    max-width: 600px;            
-    width: 100%;                 
-    padding: 4rem;             
-    background-color: var(--background-color);     
-    border-radius: 8px;        
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    font-family: 'Poppins', sans-serif; 
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--main-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
 }
 
 h1 {
@@ -29,21 +29,24 @@ h1 {
     text-align: center;
 }
 
-p {
+.container p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
     text-align: center;
+    color: var(--text-color);
 }
 
 .form-group {
     margin-bottom: 1.5rem;
 }
 
+
 label {
     display: block;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: var(--text-color);
 }
 
 input,
@@ -76,7 +79,7 @@ small {
 
 .submit-btn {
     background-color: var(--secondary-color);
-    color: var(--card-background);
+    color: white;
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
