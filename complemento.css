@@ -6,9 +6,11 @@
     --background-color: #f9f9f9;
     --border-color: gray;
     --text-color: #333;
-    --accent-color: #4CAF50;
-    --card-background: #ffffff;
     --hover-color: #ffd700;
+    --overlay-color: rgba(255, 255, 255, 0.8);
+    --overlay-color-index: rgba(255, 255, 255, 0.1);
+    --main-bg-color: rgba(255, 255, 255, 0.6);
+    --contrast:  white;
 }
 
 * {
@@ -16,6 +18,96 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* DARK MODE */
+
+body:has(.theme-switch-checkbox:checked) {
+    --primary-color: #4f1a00;
+    --secondary-color: #ff7f50;
+    --background-color: #141414;
+    --border-color: #444;
+    --text-color: #f0f0f0;
+    --hover-color: #ffa500;
+    --overlay-color: rgba(0, 0, 0, 0.8);
+    --overlay-color-index: rgba(0, 0, 0, 0.4);
+    --main-bg-color: rgba(42, 42, 42, 0.8);
+    --contrast: black;
+}
+
+.theme-switch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 30px;
+    z-index: 1000;
+}
+
+.theme-switch-checkbox {
+    display: none;
+}
+
+.theme-switch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.theme-switch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.theme-switch-inner:before, .theme-switch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.theme-switch-inner:before {
+    content: "☀️";
+    padding-left: 10px;
+    background-color: white;
+}
+
+.theme-switch-inner:after {
+    content: "🌙";
+    padding-right: 10px;
+    background-color: black;
+    text-align: right;
+}
+
+.theme-switch-slider {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 2px;
+    background: var(--contrast);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 30px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in 0s;
+}
+
+.theme-switch-checkbox:checked + .theme-switch-label .theme-switch-inner {
+    margin-left: 0;
+}
+
+.theme-switch-checkbox:checked + .theme-switch-label .theme-switch-slider {
+    right: 0px;
+}
+
+/* FONTS */
 
 @font-face {
     font-family: "Titulo"; 
@@ -67,7 +159,7 @@
     font-family: "Titulo";
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--card-background);
+    color: white;
     transition: all 0.3s ease;
 }
 
@@ -82,7 +174,7 @@
 }
 
 .nav-links a {
-    color: var(--card-background);
+    color: white;
     text-decoration: none;
     font-weight: 300;
     transition: color 0.3s ease;
@@ -103,7 +195,7 @@
     display: block;
     height: 3px;
     width: 25px;
-    background-color: var(--card-background);
+    background-color: white;
     margin-bottom: 5px;
     transition: all 0.3s ease;
 }
@@ -172,6 +264,7 @@
     color: white;
     padding: 3rem 1rem;
     font-family: "Texto Header / Footer";
+    transition: all 0.3s ease;
 }
 
 .footer-container {

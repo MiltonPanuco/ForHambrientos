@@ -39,9 +39,6 @@
         </nav>
     </header>
 
-    <!-- Futura pantalla de carga -->
-    <div id="loader-wrapper"></div>
-
     <div class="father-container">
         <!-- Carrusel de alimentos -->
         <div class="carrusel-container" style="margin-top: 3rem">
@@ -148,34 +145,36 @@
             </div>
         </div>
 
-
         <!-- Slider de imágenes -->
         <div class="slider-container" style="margin-bottom: 3rem">
             <div class="slider">
                 <div class="slide">
                     <img src="imagen/index/slider-1.jpg" alt="Slider 1">
+                    <div class="overlay"></div>
                 </div>
                 <div class="slide">
                     <img src="imagen/index/slider-2.jpg" alt="Slider 2">
+                    <div class="overlay"></div>
                 </div>
                 <div class="slide">
                     <img src="imagen/index/slider-3.png" alt="Slider 3">
+                    <div class="overlay"></div>
                 </div>
                 <div class="slide">
                     <img src="imagen/index/slider-4.jpg" alt="Slider 4">
+                    <div class="overlay"></div>
                 </div>
             </div>
         </div>
 
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
-
         <div class="footer-container">
             <div class="footer-section">
                 <h2 class="footer-title">ForHambrientos</h2>
-                <p class="footer-contact">Email: <a
-                        href="mailto:Forhambrientos.company@gmail.com">forhambrientos.company@gmail.com</a></p>
+                <p class="footer-contact">Email: <a href="mailto:Forhambrientos.company@gmail.com">forhambrientos.company@gmail.com</a></p>
             </div>
 
             <nav class="footer-section">
@@ -200,8 +199,16 @@
                 <a href="aviso-de-privacidad.html">Aviso de Privacidad</a>
             </div>
         </div>
-
     </footer>
+
+    <!-- Dark Mode Button -->
+    <div class="theme-switch">
+        <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+        <label class="theme-switch-label" for="theme-switch">
+            <span class="theme-switch-inner"></span>
+            <span class="theme-switch-slider"></span>
+        </label>
+    </div>
 
 </body>
 
