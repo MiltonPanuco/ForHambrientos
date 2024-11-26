@@ -1,7 +1,12 @@
+body {
+    background-color: var(--background-color);
+}
+
 .father-container {
     margin: 1rem;
     padding: 1rem;
     box-sizing: border-box;
+    color: var(--text-color)
 }
 
 @media (max-width: 992px) {
@@ -110,10 +115,19 @@
 
 .slide img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: block;
     object-fit: cover;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color-index); 
+}
 
 @keyframes slideShow {
     0%, 20.83% { transform: translateX(0); }
