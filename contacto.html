@@ -1,15 +1,14 @@
-<!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contacto</title>
+    <link rel="icon" href="imagen/logo-forhambrientos.png" type="image/x-icon">
 
     <link rel="stylesheet" href="contacto.css">
     <link rel="stylesheet" href="complemento.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
 
@@ -39,16 +38,9 @@
         </nav>
     </header>
 
-    <!-- Futura pantalla de carga -->
-    <div id="loader-wrapper"></div>
-
-    <!-- Header -->
-    <header id="dynamic-header"></header>
-
-    <br><br><br><br><br>
-
-    <div class="content">
+    <div class="content" style="margin-top: 5rem">
         <div class="container">
+
             <h1>Contáctanos</h1>
             <p>¿Tienes alguna pregunta o sugerencia? Estamos aquí para ayudarte. Tu opinión es importante para nosotros.</p>
             
@@ -72,17 +64,9 @@
             
         </div>
     </div>
-
-    <footer id="dynamic-footer">
-        <!-- Agregado con JS -->
-    </footer>
-
-    <button id="scrollToTop" class="transition duration-300 ease-in-out">
-        <i class="fas fa-chevron-up"></i>
-    </button>
     
+    <!-- Footer -->
     <footer class="footer">
-
         <div class="footer-container">
 
             <div class="footer-section">
@@ -112,8 +96,17 @@
             <a href="aviso-de-privacidad.html">Aviso de Privacidad</a>
             </div>
         </div>
-
     </footer>
+
+    <!-- Dark Mode Button -->
+    <div class="theme-switch">
+        <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+        <label class="theme-switch-label" for="theme-switch">
+            <span class="theme-switch-inner"></span>
+            <span class="theme-switch-slider"></span>
+        </label>
+    </div>
+
 </body>
 
 </html>
