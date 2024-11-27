@@ -4,53 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Recetas</title>
+    <title>Aviso de Privacidad</title>
     <link rel="icon" href="imagen/logo-forhambrientos.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="recetas.css">
+    <link rel="stylesheet" href="aviso-terminos.css">
     <link rel="stylesheet" href="complemento.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
 </head>
 
 <body>
 
     <header id="header" class="header">
         <nav class="nav-container">
-            
+
             <div class="logo">
                 <img src="imagen/logo-forhambrientos.png" alt="ForHambrientos Logo">
                 <span class="logo-text">ForHambrientos</span>
             </div>
-            
-            <ul class="nav-links" id="navLinks">
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="recetas.html">Recetas</a></li>
                 <li><a href="agregar-recetas.html">Agregar Receta</a></li>
                 <li><a href="contacto.html">Contáctanos</a></li>
             </ul>
-            
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-    
+
         </nav>
     </header>
 
-    <!-- Aquí va el contenido -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- Contenido ¡HERE! --> 
 
-
+    <!-- Footer -->
     <footer class="footer">
-
         <div class="footer-container">
-
             <div class="footer-section">
                 <h2 class="footer-title">ForHambrientos</h2>
-                <p class="footer-contact">Email: <a href="mailto:Forhambrientos.company@gmail.com">forhambrientos.company@gmail.com</a></p>
+                <p class="footer-contact">Email: <a
+                        href="mailto:Forhambrientos.company@gmail.com">forhambrientos.company@gmail.com</a></p>
             </div>
 
             <nav class="footer-section">
@@ -71,13 +67,21 @@
         <div class="footer-bottom">
             <p class="footer-copyright">&copy; 2024 ForHambrientos. Todos los derechos reservados.</p>
             <div class="footer-legal">
-            <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
-            <a href="aviso-de-privacidad.html">Aviso de Privacidad</a>
+                <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+                <a href="aviso-de-privacidad.html">Aviso de Privacidad</a>
             </div>
         </div>
-
     </footer>
-</body>
 
+    <!-- Dark Mode Button -->
+    <div class="theme-switch">
+        <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+        <label class="theme-switch-label" for="theme-switch">
+            <span class="theme-switch-inner"></span>
+            <span class="theme-switch-slider"></span>
+        </label>
+    </div>
+
+</body>
 
 </html>
