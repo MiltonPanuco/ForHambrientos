@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aviso de Privacidad</title>
+    <title>Recetas</title>
     <link rel="icon" href="imagen/logo-forhambrientos.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="aviso-terminos.css">
+    <link rel="stylesheet" href="recetas.css">
     <link rel="stylesheet" href="complemento.css">
 </head>
 
@@ -38,15 +38,215 @@
         </nav>
     </header>
 
-    <!-- Contenido ¡HERE! --> 
+    <main>
+        <div class="container-father">
+
+            <h6>Recetas</h6>
+            
+            <!-- Botones de categorias -->
+            <input type="radio" id="btnTodas" name="recetas" checked>
+            <label for="btnTodas" class="btn">Todas</label>
+
+            <input type="radio" id="btnRapida" name="recetas">
+            <label for="btnRapida" class="btn">Americana</label>
+
+            <input type="radio" id="btnMexicana" name="recetas">
+            <label for="btnMexicana" class="btn">Mexicana</label>
+
+            <input type="radio" id="btnGourmet" name="recetas">
+            <label for="btnGourmet" class="btn">Gourmet</label>
+
+            <input type="radio" id="btnBarata" name="recetas">
+            <label for="btnBarata" class="btn">Barata</label>
+
+            <!-- COMIDA RAPIDA -->
+
+            <!-- Hamburguesa -->
+            <div class="receta rapida todas">
+                <article class="recipe-card americana">
+                    <div class="image-container">
+                        <img src="imagen/recetas/hamburguesa.jpg" alt="Hamburguesa Clásica" class="recipe-image">
+                    </div>
+                    <div class="recipe-content">
+                        <h2 class="recipe-title">Hamburguesa Clásica</h2>
+                        <div class="recipe-metadata">
+                            <span class="metadata-item">⏰ 35 min</span>
+                            <span class="metadata-item">⭐⭐⭐⭐☆</span>
+                            <span class="metadata-item">285 MXN 💰</span>
+                        </div>
+                        <a href="#hamburguesa" class="view-recipe">Ver Receta</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="recipe-details" id="hamburguesa">
+                <a href="#" class="close-btn">&times;</a>
+
+                <h3>Ingredientes:</h3>
+                <ul>
+                    <li>500 g de carne molida de res (80% carne, 20% grasa)</li>
+                    <li>4 panes para hamburguesa</li>
+                    <li>4 rebanadas de queso cheddar</li>
+                    <li>1 tomate grande, en rodajas</li>
+                    <li>4 hojas de lechuga</li>
+                    <li>1 cebolla morada, en rodajas</li>
+                    <li>8 rebanadas de pepinillos en vinagre</li>
+                    <li>Salsa de tomate (kétchup)</li>
+                    <li>Mostaza</li>
+                    <li>Mayonesa</li>
+                    <li>Sal y pimienta al gusto</li>
+                    <li>2 cucharadas de mantequilla</li>
+                </ul>
+                <h3>Procedimiento:</h3>
+                <ol>
+                    <li>Divide la carne molida en 4 porciones iguales y forma hamburguesas del tamaño del pan,
+                        asegurándote
+                        de que no queden muy gruesas.</li>
+                    <li>Condimenta las hamburguesas con sal y pimienta al gusto por ambos lados.</li>
+                    <li>Calienta una sartén o parrilla a fuego medio-alto. Cocina las hamburguesas por 3-4 minutos de
+                        cada
+                        lado o hasta alcanzar el término deseado. Durante el último minuto de cocción, coloca una
+                        rebanada
+                        de queso cheddar sobre cada hamburguesa para que se derrita.</li>
+                    <li>Mientras tanto, unta los panes para hamburguesa con mantequilla y tuéstalos ligeramente en la
+                        sartén
+                        o parrilla.</li>
+                    <li>Arma las hamburguesas colocando una hoja de lechuga en la base del pan, seguida de la
+                        hamburguesa
+                        con queso, una o dos rodajas de tomate, cebolla, y pepinillos.</li>
+                    <li>Añade salsa de tomate, mostaza y mayonesa al gusto. Coloca la parte superior del pan.</li>
+                    <li>Sirve inmediatamente y acompaña con papas fritas o tu guarnición favorita.</li>
+                </ol>
+
+                <img src="imagen/recetas/hamburguesa.jpg" alt="Hamburguesa Clásica" style="width: 100%; margin-top: 1rem;">
+
+            </div>
+
+            <!-- Pizza -->
+            <div class="receta rapida todas">
+                <article class="recipe-card americana">
+                    <div class="image-container">
+                        <img src="imagen/recetas/pizza.jpg" alt="Pizza de Pepperoni" class="recipe-image">
+                    </div>
+                    <div class="recipe-content">
+                        <h2 class="recipe-title">Pizza Pepperoni</h2>
+                        <div class="recipe-metadata">
+                            <span class="metadata-item">⏰ 75 min</span>
+                            <span class="metadata-item">⭐⭐⭐⭐☆</span>
+                            <span class="metadata-item">215 MXN 💰</span>
+                        </div>
+                        <a href="#" class="view-recipe">Ver Receta</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- COMIDA MEXICANA -->
+
+            <!-- Tacos -->
+            <div class="receta mexicana todas">
+                <article class="recipe-card mexicana">
+                    <div class="image-container">
+                        <img src="imagen/recetas/tacos.jpg" alt="Tacos al Pastor" class="recipe-image">
+                    </div>
+                    <div class="recipe-content">
+                        <h2 class="recipe-title">Tacos al Pastor</h2>
+                        <div class="recipe-metadata">
+                            <span class="metadata-item">⏰ 90 min</span>
+                            <span class="metadata-item">⭐⭐⭐⭐⭐</span>
+                            <span class="metadata-item">250 MXN 💰</span>
+                        </div>
+                        <a href="#tacos" class="view-recipe">Ver Receta</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="recipe-details" id="tacos">
+                <a href="#" class="close-btn">&times;</a>
+                
+                <h3>Ingredientes:</h3>
+                <ul>
+                    <li>1 kg de carne de cerdo en láminas delgadas</li>
+                    <li>100 g de achiote en pasta</li>
+                    <li>2 chiles guajillos, sin semillas</li>
+                    <li>1 taza de jugo de piña</li>
+                    <li>2 dientes de ajo</li>
+                    <li>1 cebolla pequeña</li>
+                    <li>Sal y pimienta al gusto</li>
+                    <li>20 tortillas de maíz</li>
+                    <li>Piña fresca en trozos</li>
+                    <li>Cilantro picado</li>
+                    <li>Cebolla picada</li>
+                    <li>Limones (opcional, para acompañar)</li>
+                </ul>
+
+                <h3>Procedimiento:</h3>
+                <ol>
+                    <li>Licúa el achiote, los chiles guajillos, el jugo de piña, el ajo y la cebolla hasta obtener una mezcla homogénea.</li>
+                    <li>Marina la carne con esta mezcla, asegurándote de cubrirla bien. Deja reposar por al menos 4 horas o toda la noche en el refrigerador.</li>
+                    <li>Cocina la carne marinada en una parrilla, sartén o asador a fuego medio-alto hasta que esté bien cocida. Si es posible, ensarta las láminas en un trompo para cocinarla al estilo tradicional.</li>
+                    <li>Corta la carne en trozos pequeños o en tiras finas.</li>
+                    <li>Calienta las tortillas de maíz en un comal hasta que estén suaves y calientes.</li>
+                    <li>Sirve la carne sobre las tortillas calientes. Agrega piña, cilantro y cebolla al gusto.</li>
+                    <li>Acompaña con limones para exprimir sobre los tacos antes de comer, si lo deseas.</li>
+                </ol>
+
+                <img src="imagen/recetas/tacos.jpg" alt="Tacos al Pastor"
+                    style="width: 100%; margin-top: 1rem;">
+
+            </div>
+
+            <!-- COMIDA GOURMET -->
+
+            <!-- Risotto -->
+            <div class="receta gourmet todas">
+                <article class="recipe-card gourmet">
+                    <div class="image-container">
+                        <img src="imagen/recetas/risotto.jpg" alt="Risotto de Champiñones"
+                            class="recipe-image">
+                    </div>
+                    <div class="recipe-content">
+                        <h2 class="recipe-title">Risotto de Champiñones</h2>
+                        <div class="recipe-metadata">
+                            <span class="metadata-item">⏰ 55 min</span>
+                            <span class="metadata-item">⭐⭐⭐☆☆</span>
+                            <span class="metadata-item">375 MXN 💰</span>
+                        </div>
+                        <a href="#" class="view-recipe">Ver Receta</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- COMIDA BARATA -->
+
+            <!-- Tacos de sal -->
+            <div class="receta barata todas">
+                <article class="recipe-card barata">
+                    <div class="image-container">
+                        <img src="imagen/recetas/tacosal.jpg" alt="Tacos de Sal" class="recipe-image">
+                    </div>
+                    <div class="recipe-content">
+                        <h2 class="recipe-title">Tacos de Sal</h2>
+                        <div class="recipe-metadata">
+                            <span class="metadata-item">⏰ 5 min</span>
+                            <span class="metadata-item">⭐☆☆☆☆</span>
+                            <span class="metadata-item">14 MXN 💰</span>
+                        </div>
+                        <a href="#" class="view-recipe">Ver Receta</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="overlay"></div>
+
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
                 <h2 class="footer-title">ForHambrientos</h2>
-                <p class="footer-contact">Email: <a
-                        href="mailto:Forhambrientos.company@gmail.com">forhambrientos.company@gmail.com</a></p>
+                <p class="footer-contact">Email: <a href="mailto:Forhambrientos.company@gmail.com">forhambrientos.company@gmail.com</a></p>
             </div>
 
             <nav class="footer-section">

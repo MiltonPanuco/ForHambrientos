@@ -12,6 +12,8 @@
     --main-bg-color: rgba(255, 255, 255, 0.6);
     --contrast:  white;
 
+    --particular-title: #e44d26;
+
     --transition-speed: 0.3s;
 }
 
@@ -34,6 +36,9 @@ body:has(.theme-switch-checkbox:checked) {
     --overlay-color-index: rgba(0, 0, 0, 0.4);
     --main-bg-color: rgba(42, 42, 42, 0.8);
     --contrast: black;
+
+    --particular-title: #f0f0f0;
+
 }
 
 .theme-switch {

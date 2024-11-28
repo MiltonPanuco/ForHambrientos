@@ -9,24 +9,6 @@ body {
     color: var(--text-color)
 }
 
-@media (max-width: 992px) {
-    .father-container {
-        margin: 0.75rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .father-container {
-        margin: 0.5rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .father-container {
-        margin: 0.25rem;
-    }
-}
-
 /* SECCIÓN: Alimentos en carrusel */
 
 .carrusel-container {
@@ -74,17 +56,6 @@ body {
 
 .carrusel-item:hover {
     transform: translateY(-10px);
-}
-
-@media (max-width: 768px) {
-    .carrusel-img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .carrusel-item p {
-        font-size: 12px;
-    }
 }
 
 /* SECCIÓN: Imágenes en slider */
@@ -142,6 +113,10 @@ body {
     .slider-container {
         height: 70vh; 
     }
+
+    .father-container {
+        margin: 0.75rem;
+    }
 }
 
 /* Celulares */
@@ -149,7 +124,17 @@ body {
     .slider-container {
         height: 60vh; 
     }
+
+    .father-container {
+        margin: 0.5rem;
+    }
+
+    .carrusel-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .carrusel-item p {
+        font-size: 12px;
+    }
 }
-
-/* SECCIÓN:  */
-
