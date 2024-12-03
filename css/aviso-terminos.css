@@ -4,7 +4,7 @@ body { /* Estilos generales para el cuerpo de la página */
 }
 
 .background-image { /* Estilos para la imagen de fondo */
-    background-image: url('imagen/aviso-terminos/fondo.jpg');
+    background-image: url('../imagen/aviso-terminos/fondo.jpg');
     background-size: cover;
     background-position: center;
     position: fixed;

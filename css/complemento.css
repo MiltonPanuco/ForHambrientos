@@ -108,17 +108,21 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
 
 @font-face { /* Definición de la fuente "Titulo" */
     font-family: "Titulo"; 
-    src: url("fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype"); 
+    src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype"); 
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face { /* Definición de la fuente "Texto Header / Footer" */
     font-family: "Texto Header / Footer"; 
-    src: url("fonts/Montserrat-VariableFont_wght.ttf") format("truetype"); 
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype"); 
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
+
+/* HEADER */
 
 .header { /* Estilos para el encabezado */
     background-color: var(--primary-color);
@@ -250,6 +254,9 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
         transform: rotate(-45deg) translate(7px, -6px);
     }
 }
+
+
+/* FOOTER */
 
 .footer { /* Estilos para el pie de página */
     background-color: var(--primary-color);
