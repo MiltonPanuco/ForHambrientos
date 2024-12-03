@@ -1,29 +1,29 @@
-body {
+body {  /* Establece el color de fondo para el body */
     background-color: var(--background-color);
 }
 
-.father-container {
+.father-container {  /* Define el contenedor principal con márgenes, padding y color de texto */
     margin: 1rem;
     padding: 1rem;
     box-sizing: border-box;
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 /* SECCIÓN: Alimentos en carrusel */
 
-.carrusel-container {
+.carrusel-container {   /* Estilo para el contenedor del carrusel: ancho 100%, ocultar desbordamiento y padding */
     width: 100%;
     overflow: hidden;
     padding: 20px 0;
 }
 
-.carrusel {
+.carrusel { /* Estilo para el carrusel: disposición en fila con animación de movimiento */
     display: flex;
     animation: moveLeft 40s linear infinite;
     gap: 20px;
 }
 
-.carrusel-item {
+.carrusel-item { /* Estilo para los elementos del carrusel: no se redimensionan, con transición */
     flex: 0 0 auto;
     text-align: center;
     transition: transform 0.3s ease;
@@ -31,20 +31,20 @@ body {
     color: inherit;
 }
 
-.carrusel-img {
+.carrusel-img {  /* Estilo para las imágenes del carrusel: tamaño, borde redondeado y ajuste de imagen */
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.carrusel-item p {
+.carrusel-item p { /* Estilo para los párrafos dentro del carrusel: margen superior, tipo y tamaño de fuente */
     margin-top: 10px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
 }
 
-@keyframes moveLeft {
+@keyframes moveLeft { /* Definición de la animación para mover el carrusel hacia la izquierda */
     0% {
         transform: translateX(0);
     }
@@ -54,13 +54,13 @@ body {
     }
 }
 
-.carrusel-item:hover {
+.carrusel-item:hover { /* Efecto al pasar el ratón sobre un ítem del carrusel: se eleva */
     transform: translateY(-10px);
 }
 
 /* SECCIÓN: Imágenes en slider */
 
-.slider-container {
+.slider-container { /* Estilo para el contenedor del slider: posición relativa y dimensiones */
     position: relative;
     width: 100%;
     height: 100vh;
@@ -68,7 +68,7 @@ body {
     overflow: hidden;
 }
 
-.slider {
+.slider { /* Estilo para el slider: disposición en fila con animación */
     display: flex;
     width: 400%; 
     height: 100%;
@@ -76,7 +76,7 @@ body {
     animation-timing-function: ease-in-out;
 }
 
-.slide {
+.slide { /* Estilo para cada slide: flexbox y tamaño completo */
     flex: 0 0 25%; 
     width: 100%;
     height: 100%;
@@ -84,14 +84,14 @@ body {
     overflow: hidden;
 }
 
-.slide img {
+.slide img { /* Estilo para las imágenes del slider: ajuste de imagen */
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.overlay {
+.overlay { /* Estilo para la superposición que cubre las imágenes del slider */
     position: absolute;
     top: 0;
     left: 0;
@@ -100,7 +100,7 @@ body {
     background-color: var(--overlay-color-index);
 }
 
-@keyframes slideShow {
+@keyframes slideShow {  /* Definición de la animación para el slider: movimiento de las imágenes */
     0%, 20.83% { transform: translateX(0); }
     25%, 45.83% { transform: translateX(-25%); }
     50%, 70.83% { transform: translateX(-50%); }
@@ -109,7 +109,7 @@ body {
 }
 
 /* Tablets */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {  /* Ajustes para pantallas de tabletas */
     .slider-container {
         height: 70vh; 
     }
@@ -120,7 +120,7 @@ body {
 }
 
 /* Celulares */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { /* Ajustes para pantallas de celulares */
     .slider-container {
         height: 60vh; 
     }
@@ -129,12 +129,12 @@ body {
         margin: 0.5rem;
     }
 
-    .carrusel-img {
+    .carrusel-img {   /* Ajustes para imágenes de carrusel en celulares */
         width: 80px;
         height: 80px;
     }
 
-    .carrusel-item p {
+    .carrusel-item p { /* Ajustes para el texto de los ítems del carrusel en celulares */
         font-size: 12px;
     }
 }

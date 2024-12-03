@@ -1,9 +1,9 @@
-body {
+body {/* Establece el color de fondo y transición suave para el body */
     background-color: var(--background-color);
     transition: all 0.3s ease;
 }
 
-.content {
+.content { /* Define el diseño de contenido como flexbox, centrado y con padding */
     flex: 1;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@ body {
     padding: 2rem 1rem;
 }
 
-.container {
+.container {  /* Define el contenedor principal con ancho máximo, padding, fondo y sombra */
     max-width: 600px;
     width: 100%;
     padding: 2rem;
@@ -22,26 +22,25 @@ body {
     transition: all 0.3s ease;
 }
 
-h1 {
+h1 { /* Estilos para el título principal: color, tamaño y alineación */
     color: var(--secondary-color);
     font-size: 2.25rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
-.container p {
+.container p { /* Estilos para los párrafos dentro del contenedor: tamaño y color */
     font-size: 1rem;
     margin-bottom: 1.5rem;
     text-align: center;
     color: var(--text-color);
 }
 
-.form-group {
+.form-group { /* Espaciado entre los grupos de formulario */
     margin-bottom: 1.5rem;
 }
 
-
-label {
+label { /* Estilos para las etiquetas de los campos de formulario */
     display: block;
     font-size: 1rem;
     font-weight: 600;
@@ -50,7 +49,7 @@ label {
 }
 
 input,
-textarea {
+textarea { /* Estilos para los campos de entrada y textarea: tamaño, bordes y transiciones */
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
@@ -60,24 +59,24 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus {/* Estilos para los campos de entrada y textarea cuando están enfocados */
     outline: none;
     border-color: var(--secondary-color);
 }
 
-textarea {
+textarea {  /* Estilo para el textarea: altura mínima y redimensionado vertical */
     resize: vertical;
     min-height: 100px;
 }
 
-small {
+small {/* Estilos para el texto pequeño debajo de los campos */
     display: block;
     color: #666;
     font-size: 0.875rem;
     margin-top: 0.25rem;
 }
 
-.submit-btn {
+.submit-btn { /* Estilos para el botón de envío: fondo, color, tamaño y transición */
     background-color: var(--secondary-color);
     color: white;
     border: none;
@@ -90,11 +89,11 @@ small {
     width: 100%;
 }
 
-.submit-btn:hover {
+.submit-btn:hover { /* Estilo para el botón de envío al pasar el ratón */
     background-color: var(--primary-color);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) {/* Estilos para pantallas pequeñas (menos de 480px): ajuste de padding y tamaño de fuente */
     .container {
         padding: 1.5rem;
     }

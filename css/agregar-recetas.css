@@ -1,4 +1,4 @@
-body {
+body { /* Estilos generales para el cuerpo de la página */
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -8,12 +8,12 @@ body {
     color: var(--text-color);
 }
 
-main {
+main { /* Estilos para el elemento principal de la página */
     margin-bottom: 3rem;
     margin-top: 7rem;
 }
 
-.form-container {
+.form-container { /* Contenedor principal del formulario */
     font-family: 'Poppins', sans-serif;
     max-width: 600px;
     width: 100%;
@@ -25,7 +25,7 @@ main {
     margin: 0 auto;
 }
 
-.form-container h1 {
+.form-container h1 { /* Estilos para el encabezado principal del formulario */
     margin-bottom: 1.5rem;
     text-align: center;
     color: var(--secondary-color);
@@ -33,31 +33,31 @@ main {
     text-align: center;
 }
 
-.form-group {
+.form-group { /* Contenedor para grupos de campos del formulario */
     margin-bottom: 1.5rem;
 }
 
-label {
+label { /* Estilos para las etiquetas de los campos del formulario */
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
-small {
+small { /* Estilos para los textos secundarios o aclaraciones */
     display: block;
     color: #666;
     font-size: 0.875rem;
     margin-top: 0.25rem;
 }
 
-input, textarea {
+input, textarea { /* Estilos generales para los campos de entrada y áreas de texto */
     width: 100%;
     padding: 0.5rem;
     border: 1px solid var(--border-color);
     border-radius: 4px;
 }
 
-.submit-btn {
+.submit-btn { /* Estilos para el botón de envío */
     background-color: var(--secondary-color);
     color: white;
     border: none;
@@ -70,6 +70,6 @@ input, textarea {
     width: 100%;
 }
 
-.submit-btn:hover {
+.submit-btn:hover { /* Estilos para el botón de envío al pasar el cursor */
     background-color: var(--primary-color);
 }

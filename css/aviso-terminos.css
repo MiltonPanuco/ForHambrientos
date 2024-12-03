@@ -1,9 +1,9 @@
-body {
+body { /* Estilos generales para el cuerpo de la página */
     font-family: "Texto Header / Footer", sans-serif;
     color: var(--text-color);
 }
 
-.background-image {
+.background-image { /* Estilos para la imagen de fondo */
     background-image: url('imagen/aviso-terminos/fondo.jpg');
     background-size: cover;
     background-position: center;
@@ -14,7 +14,7 @@ body {
     z-index: -1;
 }
 
-.overlay {
+.overlay { /* Estilos para el overlay de fondo */
     position: fixed;
     top: 0;
     left: 0;
@@ -25,15 +25,15 @@ body {
     transition: all 0.3s ease;
 }
 
-.title-general {
+.title-general { /* Estilos para los títulos generales */
     text-align: center;
 }
 
-section {
+section { /* Estilos para los elementos de sección */
     margin-bottom: 2rem;
 }
 
-main {
+main { /* Estilos para el contenedor principal */
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 3rem;
@@ -45,16 +45,16 @@ main {
     transition: all 0.3s ease;
 }
 
-main h1 {
+main h1 { /* Estilos para el encabezado h1 en main */
     font-family: "Titulo", serif;
     margin-bottom: 1rem;
 }
 
-main h2 {
+main h2 { /* Estilos para el encabezado h2 en main */
     color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
-main p {
+main p { /* Estilos para los párrafos dentro de main */
     margin-bottom: 1rem;
 }
