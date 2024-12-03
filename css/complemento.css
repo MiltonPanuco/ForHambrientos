@@ -1,4 +1,6 @@
-:root { /* Definición de variables de colores y otros valores globales */
+/* COLORES GENERALES */
+
+:root {
     --primary-color: #e44d26;
     --secondary-color: #f16529;
     --background-color: #f9f9f9;
@@ -9,17 +11,21 @@
     --overlay-color-index: rgba(255, 255, 255, 0.1);
     --main-bg-color: rgba(255, 255, 255, 0.6);
     --contrast:  white;
+
     --particular-title: #e44d26;
+
     --transition-speed: 0.3s;
 }
 
-* { /* Establece márgenes, rellenos y el modelo de caja para todos los elementos */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando se activa el interruptor */
+/* DARK MODE */
+
+body:has(.theme-switch-checkbox:checked) {
     --primary-color: #4f1a00;
     --secondary-color: #ff7f50;
     --background-color: #141414;
@@ -30,10 +36,12 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     --overlay-color-index: rgba(0, 0, 0, 0.4);
     --main-bg-color: rgba(42, 42, 42, 0.8);
     --contrast: black;
+
     --particular-title: #f0f0f0;
+
 }
 
-.theme-switch { /* Estilos para el interruptor de tema */
+.theme-switch {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -42,25 +50,25 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     z-index: 100;
 }
 
-.theme-switch-checkbox { /* Estilos para ocultar la casilla de verificación */
+.theme-switch-checkbox {
     display: none;
 }
 
-.theme-switch-label { /* Estilos para el contenedor del interruptor */
+.theme-switch-label {
     display: block;
     overflow: hidden;
     cursor: pointer;
     border-radius: 30px;
 }
 
-.theme-switch-inner { /* Estilos para la parte interna del interruptor */
+.theme-switch-inner {
     display: block;
     width: 200%;
     margin-left: -100%;
     transition: margin 0.3s ease-in 0s;
 }
 
-.theme-switch-inner:before, .theme-switch-inner:after { /* Estilos para los elementos dentro del interruptor */
+.theme-switch-inner:before, .theme-switch-inner:after {
     display: block;
     float: left;
     width: 50%;
@@ -71,20 +79,20 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     box-sizing: border-box;
 }
 
-.theme-switch-inner:before { /* Estilos para el sol dentro del interruptor */
+.theme-switch-inner:before {
     content: "☀️";
     padding-left: 10px;
     background-color: white;
 }
 
-.theme-switch-inner:after { /* Estilos para la luna dentro del interruptor */
+.theme-switch-inner:after {
     content: "🌙";
     padding-right: 10px;
     background-color: black;
     text-align: right;
 }
 
-.theme-switch-slider { /* Estilos para el deslizador del interruptor de tema */
+.theme-switch-slider {
     display: block;
     width: 26px;
     height: 26px;
@@ -98,33 +106,33 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     transition: var(--transition-speed);
 }
 
-.theme-switch-checkbox:checked + .theme-switch-label .theme-switch-inner { /* Transición al activar el interruptor */
+.theme-switch-checkbox:checked + .theme-switch-label .theme-switch-inner {
     margin-left: 0;
 }
 
-.theme-switch-checkbox:checked + .theme-switch-label .theme-switch-slider { /* Cambio de posición al activar el interruptor */
+.theme-switch-checkbox:checked + .theme-switch-label .theme-switch-slider {
     right: 0px;
 }
 
-@font-face { /* Definición de la fuente "Titulo" */
+/* FONTS */
+
+@font-face {
     font-family: "Titulo"; 
     src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype"); 
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
-@font-face { /* Definición de la fuente "Texto Header / Footer" */
+@font-face {
     font-family: "Texto Header / Footer"; 
     src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype"); 
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 /* HEADER */
 
-.header { /* Estilos para el encabezado */
+.header {
     background-color: var(--primary-color);
     position: fixed;
     width: 100%;
@@ -133,7 +141,7 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     transition: var(--transition-speed);
 }
 
-.nav-container { /* Contenedor de la barra de navegación */
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,18 +151,18 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     transition: var(--transition-speed);
 }
 
-.logo { /* Estilos para el logo */
+.logo {
     display: flex;
     align-items: center;
 }
 
-.logo img { /* Estilos para la imagen del logo */
+.logo img {
     height: 40px;
     margin-right: 10px;
     transition: var(--transition-speed);
 }
 
-.logo-text { /* Estilos para el texto del logo */
+.logo-text {
     font-family: "Titulo";
     font-size: 1.8rem;
     font-weight: 700;
@@ -162,35 +170,35 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     transition: var(--transition-speed);
 }
 
-.nav-links { /* Estilos para los enlaces de navegación */
+.nav-links {
     display: flex;
     list-style: none;
     font-family: "Texto Header / Footer";
 }
 
-.nav-links li { /* Espaciado entre los elementos de la lista de navegación */
+.nav-links li {
     margin-left: 2rem;
 }
 
-.nav-links a { /* Estilos para los enlaces dentro de la navegación */
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 300;
     transition: var(--transition-speed);
 }
 
-.nav-links a:hover { /* Efecto al pasar el ratón sobre los enlaces */
+.nav-links a:hover {
     color: var(--hover-color);
 }
 
-.menu-toggle { /* Estilos para el botón de menú en pantallas pequeñas */
+.menu-toggle {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
 }
 
-.menu-toggle span { /* Estilos para las barras del botón de menú */
+.menu-toggle span {
     display: block;
     height: 3px;
     width: 25px;
@@ -199,25 +207,25 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     transition: var(--transition-speed);
 }
 
-.header.sticky { /* Estilos para el encabezado pegajoso */
+.header.sticky {
     background-color: rgba(228, 77, 38, 0.95);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.header.sticky .nav-container { /* Estilos para el contenedor de navegación cuando el encabezado es pegajoso */
+.header.sticky .nav-container {
     padding: 0.5rem 2rem;
 }
 
-.header.sticky .logo img { /* Tamaño del logo en el encabezado pegajoso */
+.header.sticky .logo img {
     height: 30px;
 }
 
-.header.sticky .logo-text { /* Tamaño del texto del logo en el encabezado pegajoso */
+.header.sticky .logo-text {
     font-size: 1.4rem;
 }
 
-@media screen and (max-width: 768px) { /* Estilos para pantallas más pequeñas */
-    .nav-links { 
+@media screen and (max-width: 768px) {
+    .nav-links {
         display: none;
         position: absolute;
         top: 100%;
@@ -230,7 +238,7 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .nav-links.active { 
+    .nav-links.active {
         display: flex;
     }
 
@@ -238,27 +246,130 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
         margin: 1rem 0;
     }
 
-    .menu-toggle { 
+    .menu-toggle {
         display: block;
     }
 
-    .menu-toggle.active span:nth-child(1) { 
+    .menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
 
-    .menu-toggle.active span:nth-child(2) { 
+    .menu-toggle.active span:nth-child(2) {
         opacity: 0;
     }
 
-    .menu-toggle.active span:nth-child(3) { 
+    .menu-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
     }
 }
 
+/* MENU HAMBURGUESA */
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color var(--transition-speed) ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--hover-color);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: var(--transition-speed);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: all var(--transition-speed) ease-in-out;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all var(--transition-speed) ease-in-out;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .menu-toggle:checked ~ .nav-links li {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(var(--transition-speed) * var(--i));
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
 
 /* FOOTER */
 
-.footer { /* Estilos para el pie de página */
+.footer {
     background-color: var(--primary-color);
     color: white;
     padding: 3rem 1rem;
@@ -266,7 +377,7 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     transition: var(--transition-speed);
 }
 
-.footer-container { /* Contenedor principal del pie de página */
+.footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -276,26 +387,26 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     gap: 2rem;
 }
 
-.footer-section { /* Estilos para las secciones dentro del pie de página */
+.footer-section {
     flex: 1;
     min-width: 250px;
     text-align: center;
 }
 
-.footer-title { /* Título dentro del pie de página */
+.footer-title {
     font-family: "Titulo";
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.footer-subtitle { /* Subtítulo dentro del pie de página */
+.footer-subtitle {
     font-size: 1.25rem;
     margin-bottom: 1rem;
 }
 
 .footer-contact a,
 .footer-nav-list a,
-.footer-legal a { /* Estilos para los enlaces dentro del pie de página */
+.footer-legal a {
     color: white;
     text-decoration: none;
     transition: var(--transition-speed);
@@ -303,26 +414,26 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
 
 .footer-contact a:hover,
 .footer-nav-list a:hover,
-.footer-legal a:hover { /* Efecto de hover en los enlaces del pie de página */
+.footer-legal a:hover {
     color: var(--hover-color);
 }
 
-.footer-nav-list { /* Lista de navegación en el pie de página */
+.footer-nav-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-nav-list li { /* Estilo de los elementos en la lista de navegación del pie de página */
+.footer-nav-list li {
     margin-bottom: 0.5rem;
 }
 
-.footer-logo { /* Estilo para el logo del pie de página */
+.footer-logo {
     max-width: 150px;
     height: auto;
 }
 
-.footer-bottom { /* Estilos para la parte inferior del pie de página */
+.footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: 2rem;
     padding-top: 2rem;
@@ -335,31 +446,32 @@ body:has(.theme-switch-checkbox:checked) { /* Estilos para el modo oscuro cuando
     margin-right: auto;
 }
 
-.footer-copyright { /* Estilos para el copyright en el pie de página */
+.footer-copyright {
     margin: 0;
 }
 
-.footer-legal { /* Estilos para los enlaces legales en el pie de página */
+.footer-legal {
     display: flex;
     gap: 1rem;
 }
 
-@media (max-width: 768px) { /* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+
     .footer-container,
-    .footer-bottom { 
+    .footer-bottom {
         flex-direction: column;
         align-items: center;
     }
 
-    .footer-section { 
+    .footer-section {
         margin-bottom: 2rem;
     }
 
-    .footer-copyright { 
+    .footer-copyright {
         text-align: center;
     }
 
-    .footer-legal { 
+    .footer-legal {
         margin-top: 1rem;
         flex-direction: column;
         align-items: center;
