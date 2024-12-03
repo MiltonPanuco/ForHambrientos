@@ -1,4 +1,5 @@
-body { /* Estilos generales para el cuerpo de la página */
+/* Establece el diseño flexible para el body, asegurando que ocupe todo el alto de la ventana */
+body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -8,16 +9,18 @@ body { /* Estilos generales para el cuerpo de la página */
     color: var(--text-color);
 }
 
-main { /* Estilos para el elemento principal de la página */
+/* Diseño para el main, asegurando un margen inferior y espaciado adecuado */
+main {
     margin-bottom: 3rem;
-    margin-top: 7rem;
+    padding: 2rem 1rem;
 }
 
-.form-container { /* Contenedor principal del formulario */
+/* Contenedor del formulario con un diseño centrado y bordes redondeados */
+.form-container {
     font-family: 'Poppins', sans-serif;
     max-width: 600px;
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 1rem;
     background-color: var(--main-bg-color);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -25,39 +28,36 @@ main { /* Estilos para el elemento principal de la página */
     margin: 0 auto;
 }
 
-.form-container h1 { /* Estilos para el encabezado principal del formulario */
+/* Estilo para el título, centrado y con un color específico */
+.form-container h1 {
     margin-bottom: 1.5rem;
     text-align: center;
     color: var(--secondary-color);
     font-size: 2.25rem;
-    text-align: center;
 }
 
-.form-group { /* Contenedor para grupos de campos del formulario */
+/* Configuración de los grupos de formularios */
+.form-group {
     margin-bottom: 1.5rem;
 }
 
-label { /* Estilos para las etiquetas de los campos del formulario */
+/* Estilos para las etiquetas de los formularios */
+.form-container label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
-small { /* Estilos para los textos secundarios o aclaraciones */
-    display: block;
-    color: #666;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-}
-
-input, textarea { /* Estilos generales para los campos de entrada y áreas de texto */
+/* Estilo para los campos de entrada y textarea */
+input, textarea {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid var(--border-color);
     border-radius: 4px;
 }
 
-.submit-btn { /* Estilos para el botón de envío */
+/* Estilos del botón de envío, con color de fondo y transiciones suaves */
+.submit-btn {
     background-color: var(--secondary-color);
     color: white;
     border: none;
@@ -70,6 +70,7 @@ input, textarea { /* Estilos generales para los campos de entrada y áreas de te
     width: 100%;
 }
 
-.submit-btn:hover { /* Estilos para el botón de envío al pasar el cursor */
+/* Cambia el color de fondo cuando se pasa el ratón sobre el botón */
+.submit-btn:hover {
     background-color: var(--primary-color);
 }

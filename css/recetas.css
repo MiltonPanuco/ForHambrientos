@@ -1,32 +1,28 @@
-/* Estilos Generales */
-
+/* Configura el fondo y color de texto del body */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
+/* Estilo del contenedor principal (formulario o sección) */
 main {
     margin-bottom: 3rem;
-    margin-top: 7rem;
+    padding: 2rem 1rem;
 }
 
-/* Contenedores */
-
+/* Diseño del contenedor central con borde redondeado y sombra */
 .container-father {
     font-family: 'Poppins', sans-serif;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 2rem 1rem;
     border-radius: 15px;
-    margin: 0 15vh 0 15vh;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
     background-color: var(--main-bg-color);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Título principal centrado */
 .container-father h6 {
     text-align: center;
     margin-bottom: 2rem;
@@ -36,8 +32,7 @@ main {
     letter-spacing: 2px;
 }
 
-/* Categorias (Superior) */
-
+/* Estilo de los botones de categoría */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -51,17 +46,16 @@ main {
     transition: all var(--transition-speed);
     font-weight: 500;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
+/* Efecto de hover para los botones */
 .btn:hover {
     background-color: var(--secondary-color);
     color: white;
     transform: translateY(-2px);
 }
 
-/* Cards Recetas */
-
+/* Estilos para las recetas, inicialmente ocultas */
 .receta {
     display: none;
     margin: 20px auto;
@@ -70,6 +64,7 @@ main {
     animation: fadeIn 0.5s ease-in-out;
 }
 
+/* Diseño de las tarjetas de recetas */
 .recipe-card {
     display: inline-block;
     vertical-align: top;
@@ -83,17 +78,20 @@ main {
     border: 1px solid var(--border-color);
 }
 
+/* Efecto de hover para las tarjetas de recetas */
 .recipe-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Imagen dentro de las tarjetas */
 .image-container {
     position: relative;
     overflow: hidden;
     aspect-ratio: 16/9;
 }
 
+/* Estilo de la imagen dentro de la tarjeta */
 .recipe-image {
     width: 100%;
     height: 100%;
@@ -101,20 +99,24 @@ main {
     transition: transform var(--transition-speed);
 }
 
+/* Efecto de hover sobre la imagen */
 .recipe-card:hover .recipe-image {
     transform: scale(1.05);
 }
 
+/* Contenido dentro de la tarjeta de receta */
 .recipe-content {
     padding: 1.5rem;
 }
 
+/* Título de la receta */
 .recipe-title {
     font-size: 1.5rem;
     margin: 0 0 1rem 0;
     color: var(--secondary-color);
 }
 
+/* Metadatos de la receta */
 .recipe-metadata {
     display: flex;
     justify-content: space-between;
@@ -125,6 +127,7 @@ main {
     margin: 1rem 0;
 }
 
+/* Elementos dentro de los metadatos */
 .metadata-item {
     display: flex;
     align-items: center;
@@ -132,6 +135,7 @@ main {
     font-size: 0.9rem;
 }
 
+/* Botón de vista de receta */
 .view-recipe {
     display: inline-block;
     padding: 0.8rem 1.5rem;
@@ -143,25 +147,25 @@ main {
     width: 100%;
 }
 
+/* Efecto de hover sobre el botón de vista */
 .view-recipe:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
 }
 
+/* Animación de aparición de recetas */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-
-/* Mostrar contenido teniendo en cuenta el estado del input */
+/* Mostrar contenido según el estado de los botones de radio */
 #btnTodas:checked~.todas,
 #btnRapida:checked~.rapida,
 #btnMexicana:checked~.mexicana,
@@ -170,14 +174,12 @@ main {
     display: block;
 }
 
-/* Ocultar los inputs */
+/* Ocultar los inputs de tipo radio */
 input[type="radio"] {
     display: none;
 }
 
-
-/* Modal de la receta */
-
+/* Estilos para el modal de receta */
 .overlay {
     display: none;
     position: fixed;
@@ -189,10 +191,12 @@ input[type="radio"] {
     z-index: 999;
 }
 
+/* Mostrar el overlay cuando la receta es seleccionada */
 .recipe-details:target~.overlay {
     display: block;
 }
 
+/* Estilos para el contenedor de detalles de la receta */
 .recipe-details {
     display: none;
 }
@@ -215,6 +219,7 @@ input[type="radio"] {
     animation: slideIn 0.4s ease-out;
 }
 
+/* Botón de cierre del modal */
 .recipe-details .close-btn {
     position: absolute;
     top: 1rem;
@@ -232,11 +237,13 @@ input[type="radio"] {
     transition: all 0.3s ease;
 }
 
+/* Efecto de hover en el botón de cierre */
 .recipe-details .close-btn:hover {
     background-color: var(--secondary-color);
     transform: rotate(90deg);
 }
 
+/* Estilo del título dentro del modal */
 .recipe-details h3 {
     color: var(--secondary-color);
     font-size: 1.5rem;
@@ -245,6 +252,7 @@ input[type="radio"] {
     border-bottom: 2px solid var(--border-color);
 }
 
+/* Estilos para las listas dentro del modal */
 .recipe-details ul,
 .recipe-details ol {
     padding-left: 1.5rem;
@@ -255,6 +263,7 @@ input[type="radio"] {
     padding-left: 0.5rem;
 }
 
+/* Estilo para la imagen dentro del modal */
 .recipe-details img {
     width: 100%;
     height: auto;
@@ -263,7 +272,7 @@ input[type="radio"] {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Scroll personalizado en modal */
+/* Estilos del scrollbar dentro del modal */
 .recipe-details::-webkit-scrollbar {
     width: 8px;
 }
@@ -278,38 +287,30 @@ input[type="radio"] {
     border-radius: 4px;
 }
 
+/* Animación de entrada del modal */
 @keyframes slideIn {
     from {
         opacity: 0;
         transform: translate(-50%, -45%) scale(0.95);
     }
-
     to {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
+/* Media query para pantallas medianas y grandes */
 @media (max-width: 1200px) {
     .recipe-card {
         width: calc(50% - 2rem);
     }
 
     .container-father {
-        margin: 0 5vh 0 5vh;
+        margin: auto;
     }
 }
 
+/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
     .recipe-details:target {
         padding: 2rem 1.5rem;
@@ -326,12 +327,8 @@ input[type="radio"] {
         padding-left: 1.2rem;
     }
 
-    .recipe-details li {
-        font-size: 0.95rem;
-    }
-
     .recipe-card {
-        width: calc(100% - 2rem);
-        margin: auto;
+        width: 100%;
+        margin: 1rem auto;
     }
 }

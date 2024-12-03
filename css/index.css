@@ -1,8 +1,10 @@
-body {  /* Establece el color de fondo para el body */
+/* Configura el color de fondo del body */
+body {
     background-color: var(--background-color);
 }
 
-.father-container {  /* Define el contenedor principal con márgenes, padding y color de texto */
+/* Estilo para el contenedor principal (padre) */
+.father-container {
     margin: 1rem;
     padding: 1rem;
     box-sizing: border-box;
@@ -11,56 +13,63 @@ body {  /* Establece el color de fondo para el body */
 
 /* SECCIÓN: Alimentos en carrusel */
 
-.carrusel-container {   /* Estilo para el contenedor del carrusel: ancho 100%, ocultar desbordamiento y padding */
+/* Estilo para el contenedor del carrusel */
+.carrusel-container {
     width: 100%;
     overflow: hidden;
     padding: 20px 0;
 }
 
-.carrusel { /* Estilo para el carrusel: disposición en fila con animación de movimiento */
+/* Estilo para el carrusel */
+.carrusel {
     display: flex;
-    animation: moveLeft 40s linear infinite;
+    animation: moveLeft 40s linear infinite; 
     gap: 20px;
 }
 
-.carrusel-item { /* Estilo para los elementos del carrusel: no se redimensionan, con transición */
+/* Estilo de cada item dentro del carrusel */
+.carrusel-item {
     flex: 0 0 auto;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; 
     text-decoration: none;
     color: inherit;
 }
 
-.carrusel-img {  /* Estilo para las imágenes del carrusel: tamaño, borde redondeado y ajuste de imagen */
+/* Estilo de las imágenes dentro de cada item */
+.carrusel-img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.carrusel-item p { /* Estilo para los párrafos dentro del carrusel: margen superior, tipo y tamaño de fuente */
+/* Estilo para el texto de cada item */
+.carrusel-item p {
     margin-top: 10px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
 }
 
-@keyframes moveLeft { /* Definición de la animación para mover el carrusel hacia la izquierda */
+/* Animación para mover el carrusel */
+@keyframes moveLeft {
     0% {
         transform: translateX(0);
     }
-
     100% {
-        transform: translateX(calc(-100% / 2));
+        transform: translateX(calc(-100% / 2)); 
     }
 }
 
-.carrusel-item:hover { /* Efecto al pasar el ratón sobre un ítem del carrusel: se eleva */
-    transform: translateY(-10px);
+/* Efecto hover para los items del carrusel */
+.carrusel-item:hover {
+    transform: translateY(-10px); 
 }
 
 /* SECCIÓN: Imágenes en slider */
 
-.slider-container { /* Estilo para el contenedor del slider: posición relativa y dimensiones */
+/* Estilo para el contenedor del slider */
+.slider-container {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -68,15 +77,17 @@ body {  /* Establece el color de fondo para el body */
     overflow: hidden;
 }
 
-.slider { /* Estilo para el slider: disposición en fila con animación */
+/* Estilo para el slider */
+.slider {
     display: flex;
     width: 400%; 
     height: 100%;
-    animation: slideShow 12s infinite;
+    animation: slideShow 12s infinite; 
     animation-timing-function: ease-in-out;
 }
 
-.slide { /* Estilo para cada slide: flexbox y tamaño completo */
+/* Estilo de cada slide dentro del slider */
+.slide {
     flex: 0 0 25%; 
     width: 100%;
     height: 100%;
@@ -84,14 +95,16 @@ body {  /* Establece el color de fondo para el body */
     overflow: hidden;
 }
 
-.slide img { /* Estilo para las imágenes del slider: ajuste de imagen */
+/* Estilo de las imágenes dentro de cada slide */
+.slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.overlay { /* Estilo para la superposición que cubre las imágenes del slider */
+/* Estilo del overlay (capa encima de las imágenes) */
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -100,7 +113,8 @@ body {  /* Establece el color de fondo para el body */
     background-color: var(--overlay-color-index);
 }
 
-@keyframes slideShow {  /* Definición de la animación para el slider: movimiento de las imágenes */
+/* Animación para el movimiento del slider */
+@keyframes slideShow {
     0%, 20.83% { transform: translateX(0); }
     25%, 45.83% { transform: translateX(-25%); }
     50%, 70.83% { transform: translateX(-50%); }
@@ -108,33 +122,35 @@ body {  /* Establece el color de fondo para el body */
     100% { transform: translateX(0); }
 }
 
-/* Tablets */
-@media screen and (max-width: 992px) {  /* Ajustes para pantallas de tabletas */
+/* Estilos para dispositivos tablet (pantallas medianas) */
+@media screen and (max-width: 992px) {
     .slider-container {
         height: 70vh; 
     }
 
     .father-container {
-        margin: 0.75rem;
+        margin: 0.75rem; 
     }
 }
 
-/* Celulares */
-@media screen and (max-width: 768px) { /* Ajustes para pantallas de celulares */
+/* Estilos para dispositivos móviles (pantallas pequeñas) */
+@media screen and (max-width: 768px) {
     .slider-container {
         height: 60vh; 
     }
 
     .father-container {
-        margin: 0.5rem;
+        margin: 0.5rem; 
     }
 
-    .carrusel-img {   /* Ajustes para imágenes de carrusel en celulares */
+    /* Estilo para las imágenes del carrusel en móviles */
+    .carrusel-img {
         width: 80px;
         height: 80px;
     }
 
-    .carrusel-item p { /* Ajustes para el texto de los ítems del carrusel en celulares */
+    /* Ajuste del tamaño de la fuente en los items del carrusel */
+    .carrusel-item p {
         font-size: 12px;
     }
 }

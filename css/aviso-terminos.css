@@ -1,60 +1,69 @@
-body { /* Estilos generales para el cuerpo de la página */
+/* Configura la fuente del cuerpo y el color del texto */
+body {
     font-family: "Texto Header / Footer", sans-serif;
     color: var(--text-color);
 }
 
-.background-image { /* Estilos para la imagen de fondo */
-    background-image: url('../imagen/aviso-terminos/fondo.jpg');
-    background-size: cover;
-    background-position: center;
-    position: fixed;
+/* Estilo para la imagen de fondo */
+.background-image {
+    background-image: url('../imagen/aviso-terminos/fondo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    position: fixed; 
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; 
 }
 
-.overlay { /* Estilos para el overlay de fondo */
+/* Estilo para el overlay (capa semitransparente) */
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     min-height: 100vh;
-    background-color: var(--overlay-color);
-    z-index: -1;
-    transition: all 0.3s ease;
+    background-color: var(--overlay-color); 
+    z-index: -1; 
+    transition: all 0.3s ease; 
 }
 
-.title-general { /* Estilos para los títulos generales */
+/* Estilo para el título general (centrado) */
+.title-general {
     text-align: center;
 }
 
-section { /* Estilos para los elementos de sección */
+/* Estilo para las secciones con márgenes */
+section {
     margin-bottom: 2rem;
 }
 
-main { /* Estilos para el contenedor principal */
+/* Estilo para el contenedor principal (main) */
+main {
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 3rem;
     margin-top: 7rem;
     padding: 2rem;
-    background-color: var(--main-bg-color);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    background-color: var(--main-bg-color); 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
 }
 
-main h1 { /* Estilos para el encabezado h1 en main */
+/* Estilo para los encabezados h1 dentro del contenedor main */
+main h1 {
     font-family: "Titulo", serif;
     margin-bottom: 1rem;
 }
 
-main h2 { /* Estilos para el encabezado h2 en main */
-    color: var(--secondary-color);
+/* Estilo para los encabezados h2 dentro del contenedor main */
+main h2 {
+    color: var(--secondary-color); 
     margin-bottom: 1rem;
 }
 
-main p { /* Estilos para los párrafos dentro de main */
+/* Estilo para los párrafos dentro del contenedor main */
+main p {
     margin-bottom: 1rem;
 }
